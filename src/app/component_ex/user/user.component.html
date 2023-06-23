@@ -1,0 +1,55 @@
+<!-- <div class="flex space-x-2 mt-6 container mx-auto">
+  <button (click)="add()" class="rounded-sm bg-slate-400 px-10 shadow-sm hover:bg-amber-200">
+    UP
+  </button>
+  <span class="border px-6 bg-orange-400">{{count}}</span>
+  <button (click)="redu()" class="rounded-sm bg-slate-400 px-10 shadow-sm hover:bg-amber-200">
+    Down
+  </button>
+</div> -->
+<button class="border border-orange-600 m-4 rounded-md px-4 hover:bg-orange-600" (click)="hide =!hide">Hide Table</button>
+
+  <table class="table-auto border-collapse border border-sky-500"[class.hidden]="hide" >
+    <h1>{{title}}</h1>
+    <thead>
+      <tr>
+        <th class="border border-indigo-300 " [attr.colspan]="two">Name</th>
+        <th class="border border-indigo-300 " [attr.colspan]="two">Phone</th>
+        <th  class="border border-indigo-300 " [attr.colspan]="two">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-orange-500" [attr.rowspan]="three">{{user?.name}}</td>
+        <td class="border border-orange-500">{{user?.phone}}</td>
+        <td class="border border-orange-500">{{user?.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <table class="table-auto">
+    <thead class="bg-gradient-to-r from-orange-100 via-pink-500 to-blue-200">
+      <tr>
+        <th>Song</th>
+        <th>Artist</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+        <td>Malcolm Lockyer</td>
+        <td>1961</td>
+      </tr>
+      <tr>
+        <td>Witchy Woman</td>
+        <td>The Eagles</td>
+        <td>1972</td>
+      </tr>
+      <tr>
+        <td>Shining Star</td>
+        <td>Earth, Wind, and Fire</td>
+        <td>1975</td>
+      </tr>
+    </tbody>
+  </table> -->

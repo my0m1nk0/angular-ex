@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'compo-ex';
+  title = 'compo-ex'
+
+  
+
+  daung:User={
+    name:"Daung Daung",
+    phone:"098764758",
+    email:"daung@gmail.com"
+  }
+  viewCode =1;
 }
