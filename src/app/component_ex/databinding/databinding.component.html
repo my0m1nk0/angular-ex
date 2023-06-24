@@ -1,1 +1,9 @@
-<p>databinding works!</p>
+
+
+
+<div class="w-64 h-24 m-3 bg-gray-200 rounded-md drop-shadow-xl items-center text-center">
+<input type="color" #color (change)="getColor(color.value)" name="" id="" class="grid mx-auto ">
+<span class="font-bold">Choose Color</span>
+</div>
+<input type="range" #range (change)="changeRange(range.value)" name="" id="" min="0" max="950">{{value}}
+<div class="h-24" [style]="changeBackground()" [style.width.px]="value"></div>
