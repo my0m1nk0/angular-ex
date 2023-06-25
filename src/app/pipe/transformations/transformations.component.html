@@ -1,0 +1,64 @@
+
+<div class="container">
+    <table class=" w-full border-separate border-slate-400 ">
+        <thead >
+            <tr class="">
+                <td class="border border-slate-400">Data Type</td>
+                <td class="border border-slate-400">Without Pipe</td>
+                <td class="border border-slate-400">Using Pipe</td>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border border-slate-400">Custom Object</td>
+                <td class="border border-slate-400">{{user}}</td>
+                <td class="border border-slate-400">{{user | userName | uppercase}}</td>
+            </tr>
+            <tr>
+                <td class="border border-slate-400">Custom Object</td>
+                <td class="border border-slate-400">{{user}}</td>
+                <td class="border border-slate-400">{{ user | userName : true  }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="mt-4 border border-green-100">
+    <div class="grid grid-cols-4 gap-4">
+        <div >Upper</div>
+        <div >{{message}}</div>
+        <div >{{message | uppercase}}</div>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+        <div>Lower</div>
+        <div>{{message}}</div>
+        <div>{{message | lowercase}}</div>
+    </div>
+    <div class="grid grid-cols-4 gap-4 ">
+        <div>Date</div>
+        <div>{{today}}</div>
+        <!-- <div>{{today | date:'short'}}</div> -->
+        <!-- <div>{{today | date:'yyyy-MM-dd HH:mm':'+06:30'}}</div> -->
+<!-- my-MM -->
+        <div>{{today | date :'longDate' : '+9:00' : 'ja-JP'}}</div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-4">
+        <div>Decimal</div>
+        <div>{{data1}}</div>
+        <div>{{data1 | number :'1.2-2'}}</div>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+        <div>Decimal</div>
+        <div>{{data}}</div>
+        <div>{{data | number :'1.2-2'}}</div>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+        <div>Currency</div>
+        <div>{{per}}</div>
+        <!-- <div>{{per | currency :'EUR':'symbol':'4.2-2'}}</div> -->
+        <div>{{per | currency}}</div>
+
+    </div>
+</div>
